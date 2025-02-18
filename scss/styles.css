@@ -157,6 +157,7 @@ html {
   margin: 0 0 116px 0;
   transition: 0.3s ease;
   outline: none;
+  display: block;
 }
 @media (max-width: 1339px) {
   .hero__link {
@@ -413,7 +414,7 @@ html {
 }
 @media (max-width: 1019px) {
   .video__container {
-    box-shadow: -29px -41px 0 0 #F7EEE5;
+    box-shadow: -46px 0 0px -16px #F7EEE5, -40px -50px 0px -10px #F7EEE5;
   }
 }
 @media (max-width: 699px) {
@@ -1331,6 +1332,8 @@ html {
 .achievement-list-mobile__picture {
   overflow: hidden;
   height: auto;
+  width: 100%;
+  object-fit: cover;
 }
 
 .achievement-list-mobile__item .achievement-list-mobile__text--stats {
