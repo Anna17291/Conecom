@@ -1,0 +1,270 @@
+.mission__text {
+  padding: 94px 429px 94px 145px;
+  box-sizing: border-box;
+  background-color: #0A3B93;
+  color: #ffffff;
+  background-image: url("../img/advantages-arrow.svg");
+  background-repeat: no-repeat;
+  background-size: 47px 60px;
+  background-position: 60px center;
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  position: relative;
+  margin: 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 437px;
+    height: 173px;
+    right: 0;
+    bottom: 0;
+    background-image: url("../img/advantages-after.svg");
+
+
+    @include vp-1339 {
+      background-image: url("../img/advantages-after-m.svg");
+      background-repeat: no-repeat;
+      right: 0;
+      bottom: 0;
+      width: 151px;
+      height: 176px;
+    }
+
+    @include vp-1019 {
+      background-image: url("../img/advantages-after-s.svg");
+      background-repeat: no-repeat;
+      right: 0;
+      bottom: 0;
+      width: 179px;
+      height: 97px;
+    }
+
+    @include vp-699 {
+      background-image: url("../img/advantages-after-xs.svg");
+      right: 0;
+      bottom: 0;
+      width: 142px;
+      height: 67px;
+    }
+  }
+
+  @include vp-1339 {
+    box-shadow: 0 -18px 0 0 #F7EEE5;
+    padding: 94px 130px 94px 125px;
+    background-position: 40px center;
+  }
+
+  @include vp-1019 {
+    box-shadow: none;
+    font-size: 16px;
+    line-height: 20px;
+    min-height: 104px;
+    padding: 32px 90px 32px 69px;
+    background-size: 22px 28px;
+    background-position: 20px center;
+  }
+
+  @include vp-699 {
+    min-height: 144px;
+    padding: 30px 16px 32px 43px;
+    letter-spacing: -0.1px;
+    background-position: 13px 33px;
+
+  }
+}
+
+.mission__slogan {
+  padding: 20px 30px 40px 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../img/advantages-bg.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 440px;
+  width: 100%;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-top: -1px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/advantages-bg-2x.webp");
+  }
+
+  @include vp-1339 {
+    min-height: 465px;
+    background: url("../img/advantages-bg-m.webp") no-repeat;
+    background-size: cover;
+    padding: 27px 30px 40px 30px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/advantages-bg-m-2x.webp");
+    }
+  }
+
+  @include vp-1019 {
+    min-height: 275px;
+    padding: 35px 92px;
+    background-image: url("../img/advantages-bg-s-2x.webp");
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/advantages-bg-s-2x.webp");
+    }
+  }
+
+  @include vp-699 {
+    padding: 26px 22px;
+    justify-content: flex-start;
+    background: url("../img/advantages-bg-xs.webp") no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/advantages-bg-xs-2x.webp");
+    }
+  }
+}
+
+.mission__header {
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 48px;
+  line-height: 80px;
+  margin: 0 0 40px 0;
+  font-weight: 400;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 66px;
+    height: 4px;
+    background-color: #ffffff;
+    position: absolute;
+    left: -20px;
+    top: 48%;
+    transform: translateY(-100%);
+    transform: translateX(-100%);
+
+    @include vp-1019 {
+      width: 15px;
+      height: 1px;
+      left: -12px;
+    }
+  }
+
+  &::after {
+    content: "";
+    width: 66px;
+    height: 4px;
+    background-color: #ffffff;
+    position: absolute;
+    right: -20px;
+    top: 48%;
+    transform: translateY(-100%);
+    transform: translateX(100%);
+
+    @include vp-1019 {
+      width: 15px;
+      height: 1px;
+      right: -12px;
+    }
+  }
+
+  @include vp-1339 {
+    margin-bottom: 30px;
+  }
+
+  @include vp-1019 {
+    font-size: 30px;
+    line-height: 46px;
+    margin-bottom: 20px;
+  }
+
+  @include vp-699 {
+    font-size: 18px;
+    line-height: 46px;
+    margin-bottom: 4px;
+  }
+}
+
+.mission__lead {
+  font-family: "Arial", sans-serif;
+  margin: 0 0 40px 0;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+
+  @include vp-1339 {
+    padding: 0 60px;
+    line-height: 32px;
+    margin-bottom: 32px;
+  }
+
+  @include vp-1019 {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 8px;
+    padding: 0;
+  }
+
+  @include vp-699 {
+    margin-bottom: 30px;
+  }
+}
+
+.mission__link {
+  width: 283px;
+  min-height: 68px;
+  background-color: #ffffff;
+  color: #0A3B93;
+  line-height: 28px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  text-transform: none;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+
+  @include vp-1019 {
+    width: 171px;
+    min-height: 48px;
+    font-size: 14px;
+    line-height: 28px;
+    padding: 10px;
+  }
+
+  @include vp-699 {
+    font-size: 18px;
+    width: 197px;
+  }
+
+  &:hover,
+  &:focus-visible {
+    box-shadow: 0 0 2px 2px rgba(10, 59, 142, 1);
+    outline: none;
+  }
+
+  &:active {
+    box-shadow: 0 0 2px 2px rgba(10, 59, 142, 0.5);
+  }
+
+  &:not(:active) {
+    box-shadow: 0;
+  }
+}

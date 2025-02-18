@@ -1,0 +1,14 @@
+@import "variables.scss";
+@import "global/fonts.scss";
+@import "global/global.scss";
+@import "global/mixins.scss";
+
+
+@import "blocks/hero";
+@import "blocks/about";
+@import "blocks/video";
+@import "blocks/mission";
+@import "blocks/advantages";
+@import "blocks/achievement";
+@import "blocks/achievement-list-mobile";
+@import "blocks/wrapper";

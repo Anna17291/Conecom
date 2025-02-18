@@ -1,0 +1,155 @@
+.hero {
+  min-height: 599px;
+  background-size: cover;
+  background-image: url("../img/hero-desktop.webp");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/hero-desktop-2x.webp");
+  }
+
+  position: relative;
+  background-repeat: no-repeat;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+
+  &::after {
+    content: "";
+    background-image: url("../img/hero-after.svg");
+    background-repeat: no-repeat;
+    bottom: -98px;
+    right: 0;
+    width: 363px;
+    height: 368px;
+    z-index: 2;
+    position: absolute;
+  }
+
+  @include vp-1339 {
+    background-image: url("../img/hero-m.webp");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/hero-m-2x.webp");
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  @include vp-1019 {
+    min-height: 314px;
+    background-image: url("../img/hero-s.webp");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/hero-s-2x.webp");
+    }
+  }
+
+  @include vp-699 {
+    min-height: 352px;
+  }
+}
+
+.hero__container {
+  padding: 0 60px 30px;
+  color: #ffffff;
+
+  @include vp-1339 {
+    padding: 0 40px 30px;
+  }
+
+
+  @include vp-1019 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  @include vp-699 {
+    padding: 0 15px 20px;
+  }
+}
+
+.hero__break {
+  @include vp-699 {
+    display: none;
+  }
+}
+
+.hero__link {
+  margin: 0 0 116px 0;
+  transition: 0.3s ease;
+  outline: none;
+
+  @include vp-1339 {
+    margin: 0 0 136px 20px;
+  }
+
+  @include vp-1019 {
+    margin: 0 0 55px 0;
+  }
+
+  &:hover,
+  &:focus-visible {
+    .hero__logo {
+      opacity: 0.9;
+      outline: none;
+      box-shadow: 3px 3px 3px rgba(10, 59, 142, 0.5),
+        -3px 3px 3px rgba(10, 59, 142, 0.5);
+    }
+  }
+}
+
+.hero__logo {
+  -webkit-tap-highlight-color: transparent;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  margin: 0;
+
+  @include vp-1019 {
+    width: 167px;
+    height: 64px;
+  }
+}
+
+.hero__header {
+  text-transform: uppercase;
+  font-size: 72px;
+  line-height: 80px;
+  margin: -5px 0 15px 0;
+  font-weight: 400;
+
+  @include vp-1339 {
+    margin-bottom: 28px;
+    box-sizing: border-box;
+  }
+
+  @include vp-1019 {
+    font-size: 36px;
+    line-height: 40px;
+    margin-bottom: 20px;
+  }
+
+  @include vp-699 {
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+}
+
+.hero__description {
+  font-size: 26px;
+  line-height: 36px;
+  margin: 0;
+
+  @include vp-1019 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}

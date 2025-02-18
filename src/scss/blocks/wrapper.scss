@@ -1,0 +1,21 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 1280px;
+  margin: 0 auto;
+
+
+  @include vp-1339 {
+    width: 960px;
+  }
+
+  @include vp-1019 {
+    width: 640px;
+  }
+
+  @include vp-699 {
+    width: 100%;
+  }
+}

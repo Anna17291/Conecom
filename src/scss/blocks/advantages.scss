@@ -1,0 +1,246 @@
+.advantages__container {
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.advantages__wrapper {
+  background-color: #f7eee5;
+  width: 100%;
+  height: 100%;
+  padding: 100px 60px 85px;
+  box-sizing: border-box;
+
+  @include vp-1339 {
+    padding: 78px 40px 37px;
+  }
+
+  @include vp-1019 {
+    position: relative;
+    padding: 60px 45px 60px 20px;
+  }
+
+  @include vp-699 {
+    padding: 50px 14px 58px;
+  }
+}
+
+.advantages__header {
+  color: #0a3b93;
+  font-size: 40px;
+  line-height: 60px;
+  font-weight: 400;
+  margin: 0 0 40px 0;
+
+  @include vp-1339 {
+    margin-bottom: 12px;
+  }
+
+  @include vp-1019 {
+    font-size: 20px;
+    line-height: 32px;
+    margin-bottom: 20px;
+  }
+}
+
+.advantages__list {
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 32px;
+  column-gap: 2.9%;
+
+  @include vp-1339 {
+    column-gap: 3.6%;
+    row-gap: 20px;
+  }
+
+  @include vp-1019 {
+    grid-auto-columns: 1fr;
+    grid-auto-flow: column;
+    column-gap: 0;
+    margin: 0;
+    margin-bottom: 5px;
+  }
+}
+
+.advantages {
+  .advantages__item {
+    height: 100%;
+    min-height: 100%;
+  }
+}
+
+.advantages__item {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+}
+
+.advantages__image {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.advantages__link {
+  background-color: #0a3b93;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 20px 20px 50px;
+  box-sizing: border-box;
+  min-height: 139px;
+  font-size: 18px;
+  line-height: 22px;
+  margin: 0;
+  font-weight: 400;
+  cursor: pointer;
+  position: relative;
+  height: 100%;
+  -webkit-tap-highlight-color: transparent;
+  transition: 0.3s ease;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 1px;
+    background-color: #ffffff;
+    bottom: 38px;
+    right: 20px;
+
+    @include vp-1019 {
+      bottom: 33px;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 15px;
+    background-color: #ffffff;
+    bottom: 31px;
+    right: 27px;
+
+    @include vp-1019 {
+      bottom: 26px;
+    }
+  }
+
+  @include vp-1339 {
+    min-height: 165px;
+  }
+
+  @include vp-1019 {
+    min-height: 106px;
+    font-size: 14px;
+    line-height: 22px;
+    padding-bottom: 20px;
+  }
+
+  &:hover,
+  &:focus-visible {
+    color: #0a3b93;
+    background-color: #ffffff;
+    outline: none;
+
+    &::before {
+      background-color: #0a3b93;
+    }
+
+    &::after {
+      background-color: #0a3b93;
+    }
+  }
+}
+
+.advantages .advantages__pagination {
+  padding-left: 5px;
+  bottom: 40px;
+  display: none;
+
+  @include vp-1019 {
+    display: block;
+  }
+
+  @include vp-699 {
+    bottom: 40px;
+  }
+}
+
+.advantages__pagination {
+  .swiper-pagination-bullet {
+    width: 4px;
+    height: 4px;
+    background-color: rgba(138, 123, 96, 0.33);
+    opacity: 1;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: rgba(10, 59, 147, 1);
+  }
+}
+
+.advantages__button-prev {
+  left: 0;
+  top: 54%;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  display: none;
+
+  @include vp-1019 {
+    display: block;
+  }
+}
+
+.advantages__button-next {
+  right: 0;
+  top: 54%;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+
+  display: none;
+
+  @include vp-1019 {
+    display: block;
+  }
+}
+
+.advantages {
+
+  .advantages__button-next::after,
+  .advantages__button-prev::after {
+    color: transparent;
+  }
+}
+
+.advantages__button-next::after {
+  background-image: url("../img/arrow.svg");
+  background-repeat: no-repeat;
+  background-size: 11px 7px;
+  width: 11px;
+  height: 7px;
+  top: 50%;
+  position: absolute;
+  right: 3px;
+}
+
+.advantages__button-prev::after {
+  background-image: url("../img/arrow.svg");
+  background-repeat: no-repeat;
+  background-size: 11px 7px;
+  width: 11px;
+  height: 7px;
+  top: 50%;
+  position: absolute;
+  left: 0;
+  transform: rotate(180deg);
+}
