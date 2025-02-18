@@ -81,6 +81,7 @@
   margin: 0 0 116px 0;
   transition: 0.3s ease;
   outline: none;
+  display: block;
 
   @include vp-1339 {
     margin: 0 0 136px 20px;

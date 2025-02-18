@@ -36,7 +36,8 @@
   }
 
   @include vp-1019 {
-    box-shadow: -29px -41px 0 0 #F7EEE5;
+    box-shadow: -46px 0 0px -16px #F7EEE5,
+      -40px -50px 0px -10px #F7EEE5;
   }
 
   @include vp-699 {
